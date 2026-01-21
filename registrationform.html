@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #ff69b4;
+        }
+
+        .form-box {
+            width: 350px;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            background-color: #ffd6e8;
+            box-shadow: 0 0 10px #ff41a0;
+        }
+
+        .form-box h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            display: none;
+            color: red;
+            font-size: 15px;
+            margin-top: 6px;
+        }
+
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        input:invalid + .error {
+            display: block;
+        }
+
+        .button-row {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+    <h1>Registration Form</h1>
+
+    <form>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <span class="error">Name is required</span>
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <span class="error">Enter a valid email</span>
+        </p>
+
+        <p>
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="13" max="40" required placeholder=" ">
+            <span class="error">Invalid age (13–40 only)</span>
+        </p>
+
+        <p class="button-row">
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
